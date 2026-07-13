@@ -1,0 +1,50 @@
+import { Check, ClipboardList, Eye, Layers, Shield, Sparkles } from "lucide-react";
+import { CtaBand, imagePath, PageHero, SiteShell, TrustStrip } from "@/components/SiteShell";
+
+export default function ChantierPage() {
+  const steps = [
+    { icon: Eye, title: "Repérage", text: "Identification des surfaces, résidus, zones fragiles et accès." },
+    { icon: Shield, title: "Protection", text: "Préservation des éléments finis et choix du matériel adapté." },
+    { icon: Layers, title: "Dépoussiérage", text: "Aspiration minutieuse du haut vers le bas, jusque dans les recoins." },
+    { icon: Sparkles, title: "Finitions", text: "Sols, vitres, menuiseries, sanitaires et points de contact." },
+    { icon: ClipboardList, title: "Contrôle final", text: "Vérification de chaque zone avant validation de la prestation." },
+  ];
+
+  return (
+    <SiteShell>
+      <PageHero eyebrow="Notre spécialité" title="Nettoyage après chantier et après travaux." text="Une remise en état rigoureuse pour livrer un appartement, une villa, un commerce ou un bureau propre et immédiatement présentable." image="nettoyage-detail.png" />
+      <TrustStrip />
+      <section className="px-5 py-20 lg:px-8 lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="section-kicker">Remise en état</p>
+            <h2 className="section-title">Les traces des travaux ne doivent pas rester.</h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600">La poussière de plâtre, les projections, les films de protection et les résidus s’installent partout. Notre intervention suit un ordre précis pour ne pas remettre la poussière sur les zones déjà traitées.</p>
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+              {["Poussières fines", "Traces de peinture", "Résidus de colle", "Films de protection", "Joints et rails", "Vitres et encadrements", "Sols et plinthes", "Sanitaires et cuisine"].map((item) => (
+                <li key={item} className="flex items-center gap-3 text-sm font-semibold text-gray-800"><Check className="h-4 w-4 text-emerald-600" />{item}</li>
+              ))}
+            </ul>
+          </div>
+          <img src={imagePath("hero-chantier.png")} alt="Nettoyage complet d'un appartement après chantier" className="min-h-[480px] w-full rounded-lg object-cover" />
+        </div>
+      </section>
+      <section className="bg-gray-100 px-5 py-20 lg:px-8 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <p className="section-kicker">Déroulement</p>
+          <h2 className="section-title">Une intervention en cinq étapes.</h2>
+          <div className="mt-12 grid gap-4 md:grid-cols-5">
+            {steps.map(({ icon: Icon, title, text }, index) => (
+              <article key={title} className="rounded-lg bg-white p-6">
+                <div className="flex items-center justify-between"><Icon className="h-6 w-6 text-emerald-600" /><span className="text-xs font-extrabold text-gray-400">0{index + 1}</span></div>
+                <h3 className="mt-7 font-extrabold">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-gray-600">{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <CtaBand />
+    </SiteShell>
+  );
+}
