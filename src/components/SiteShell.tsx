@@ -26,7 +26,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
 }
 
 export function TrustStrip() {
-  return <section className="relative overflow-hidden bg-white px-5 pb-16 pt-24 text-center sm:pb-20 sm:pt-28 lg:px-8"><div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#071521] via-sky-100 to-white" /><div className="relative mx-auto max-w-4xl"><p className="font-serif text-3xl italic leading-tight text-[#071521] sm:text-4xl lg:text-5xl">"Un espace propre inspire confiance, sérénité et efficacité."</p><p className="mt-8 text-xs font-extrabold uppercase tracking-[0.18em] text-sky-700">Zaki Cleaning Service</p></div></section>;
+  return <section className="relative overflow-hidden bg-white px-5 pb-8 pt-24 text-center sm:pb-10 sm:pt-28 lg:px-8"><div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#071521] via-sky-100 to-white" /><div className="relative mx-auto max-w-4xl"><p className="font-serif text-3xl italic leading-tight text-[#071521] sm:text-4xl lg:text-5xl">"Un espace propre inspire confiance, sérénité et efficacité."</p><p className="mt-6 text-xs font-extrabold uppercase tracking-[0.18em] text-sky-700">Zaki Cleaning Service</p></div></section>;
 }
 
 export function PageHero({ eyebrow, title, text, image, imagePosition = "object-center" }: { eyebrow: string; title: string; text: string; image: string; imagePosition?: string }) {
