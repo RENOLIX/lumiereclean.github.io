@@ -1,0 +1,22 @@
+.zaki-staggered-menu { position: relative; z-index: 80; }
+.zaki-menu-toggle { display: inline-flex; align-items: center; gap: 0.5rem; border: 0; background: transparent; color: #071521; cursor: pointer; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.zaki-menu-icon { position: relative; display: inline-block; width: 18px; height: 18px; }
+.zaki-menu-icon i { position: absolute; top: 50%; left: 50%; display: block; width: 18px; height: 2px; border-radius: 2px; background: currentColor; transform: translate(-50%, -50%); }
+.zaki-menu-icon i:last-child { transform: translate(-50%, -50%) rotate(90deg); }
+.zaki-menu-layers, .zaki-menu-panel { position: fixed; top: 0; right: 0; bottom: 0; width: min(100vw, 430px); }
+.zaki-menu-layers { pointer-events: none; z-index: 1; }
+.zaki-menu-layer { position: absolute; inset: 0; }
+.zaki-menu-layer-one { background: #38bdf8; }
+.zaki-menu-layer-two { background: #0e7490; }
+.zaki-menu-panel { z-index: 2; overflow-y: auto; background: #ffffff; }
+.zaki-menu-panel-inner { display: flex; min-height: 100%; flex-direction: column; padding: 7rem 2rem 2.5rem; }
+.zaki-menu-eyebrow { margin: 0 0 2rem; color: #0284c7; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
+.zaki-menu-panel ul { margin: 0; padding: 0; list-style: none; }
+.zaki-menu-panel li { overflow: hidden; border-top: 1px solid #e2e8f0; }
+.zaki-menu-panel li:last-child { border-bottom: 1px solid #e2e8f0; }
+.zaki-menu-panel a { display: block; padding: 1rem 0; color: #071521; font-size: clamp(1.85rem, 8vw, 2.7rem); font-weight: 800; line-height: 1; letter-spacing: 0; text-decoration: none; }
+.zaki-menu-label { display: inline-block; transform-origin: 50% 100%; }
+.zaki-menu-panel nav:hover a { color: #94a3b8; }
+.zaki-menu-panel nav a:hover, .zaki-menu-panel nav a:focus-visible { color: #0284c7; outline: none; }
+.zaki-menu-call { margin-top: auto; padding-top: 3rem; color: #0284c7; font-size: 1rem; font-weight: 800; text-decoration: none; }
+@media (min-width: 1024px) { .zaki-staggered-menu { display: none; } }
