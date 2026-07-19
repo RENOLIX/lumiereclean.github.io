@@ -17,7 +17,7 @@ const word: Variants = {
 
 export function WordPullUp({ words, className = "" }: WordPullUpProps) {
   return (
-    <motion.h2 variants={wrapper} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.35 }} className={className}>
+    <motion.h2 variants={wrapper} initial="hidden" animate="show" className={className}>
       {words.split(" ").map((item, index) => <motion.span key={`${item}-${index}`} variants={word} className="inline-block pr-2">{item}</motion.span>)}
     </motion.h2>
   );
