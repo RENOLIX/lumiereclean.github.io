@@ -94,7 +94,7 @@ export function PageHero({ eyebrow, title, text, image }: { eyebrow: string; tit
   return (
     <section className="relative min-h-[68vh] overflow-hidden bg-[#071521] pt-[82px]">
       <img src={imagePath(image)} alt="" className="absolute inset-0 h-full w-full object-cover" />
-      <div className="absolute inset-0 bg-[#071521]/80" />
+      <div className="absolute inset-0 bg-[#071521]/65" />
       <div className="relative mx-auto flex min-h-[calc(68vh-82px)] max-w-7xl items-center px-5 py-20 lg:px-8">
         <div className="max-w-3xl">
           <p className="mb-5 text-xs font-extrabold uppercase text-sky-300">{eyebrow}</p>
