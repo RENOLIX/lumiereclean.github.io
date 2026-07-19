@@ -1,4 +1,5 @@
-import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import "./StaggeredMenu.css";
@@ -36,5 +37,12 @@ export function StaggeredMenu({ items }: { items: MenuItem[] }) {
     setOpen(next);
   }, []);
 
-  return <div className="zaki-staggered-menu" data-open={open || undefined}><button type="button" className="zaki-menu-toggle" onClick={() => setMenu(!open)} aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} aria-expanded={open}><span className="zaki-menu-toggle-text">{open ? "Fermer" : "Menu"}</span><span ref={iconRef} className="zaki-menu-icon" aria-hidden="true"><i /><i /></span></button><div ref={layerRef} className="zaki-menu-layers" aria-hidden="true"><div className="zaki-menu-layer zaki-menu-layer-one" /><div className="zaki-menu-layer zaki-menu-layer-two" /></div><aside ref={panelRef} className="zaki-menu-panel" aria-hidden={!open}><div className="zaki-menu-panel-inner"><p className="zaki-menu-eyebrow">Navigation</p><nav aria-label="Navigation mobile"><ul>{items.map((item) => <li key={item.to}><Link to={item.to} aria-label={item.ariaLabel} onClick={() => setMenu(false)}><span className="zaki-menu-label">{item.label}</span></Link></li>)}</ul></nav><a className="zaki-menu-call" href="tel:+213779306608">0779 30 66 08</a></div></aside></div>;
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
+
+  const panel = <div className="zaki-menu-overlay" data-open={open || undefined}><div ref={layerRef} className="zaki-menu-layers" aria-hidden="true"><div className="zaki-menu-layer zaki-menu-layer-one" /><div className="zaki-menu-layer zaki-menu-layer-two" /></div><aside ref={panelRef} className="zaki-menu-panel" aria-hidden={!open}><div className="zaki-menu-panel-inner"><p className="zaki-menu-eyebrow">Navigation</p><nav aria-label="Navigation mobile"><ul>{items.map((item) => <li key={item.to}><Link to={item.to} aria-label={item.ariaLabel} onClick={() => setMenu(false)}><span className="zaki-menu-label">{item.label}</span></Link></li>)}</ul></nav><a className="zaki-menu-call" href="tel:+213779306608">0779 30 66 08</a></div></aside></div>;
+
+  return <div className="zaki-staggered-menu" data-open={open || undefined}><button type="button" className="zaki-menu-toggle" onClick={() => setMenu(!open)} aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} aria-expanded={open}><span className="zaki-menu-toggle-text">{open ? "Fermer" : "Menu"}</span><span ref={iconRef} className="zaki-menu-icon" aria-hidden="true"><i /><i /></span></button>{createPortal(panel, document.body)}</div>;
 }

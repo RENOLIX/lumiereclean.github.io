@@ -3,7 +3,9 @@
 .zaki-menu-icon { position: relative; display: inline-block; width: 18px; height: 18px; }
 .zaki-menu-icon i { position: absolute; top: 50%; left: 50%; display: block; width: 18px; height: 2px; border-radius: 2px; background: currentColor; transform: translate(-50%, -50%); }
 .zaki-menu-icon i:last-child { transform: translate(-50%, -50%) rotate(90deg); }
-.zaki-menu-layers, .zaki-menu-panel { position: fixed; top: 0; right: 0; bottom: 0; width: min(100vw, 430px); }
+.zaki-menu-overlay { position: fixed; inset: 0; z-index: 49; pointer-events: none; }
+.zaki-menu-overlay[data-open] { pointer-events: auto; }
+.zaki-menu-layers, .zaki-menu-panel { position: absolute; top: 0; right: 0; bottom: 0; width: min(100vw, 430px); }
 .zaki-menu-layers { pointer-events: none; z-index: 1; }
 .zaki-menu-layer { position: absolute; inset: 0; }
 .zaki-menu-layer-one { background: #38bdf8; }
