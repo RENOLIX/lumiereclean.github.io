@@ -5,6 +5,7 @@ import ChantierPage from "./pages/chantier/page";
 import DevisPage from "./pages/devis/page";
 import ServicesPage from "./pages/services/page";
 import NotFound from "./pages/NotFound";
+import PrixPage from "./pages/PrixPage";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/nettoyage-apres-chantier" element={<ChantierPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/devis" element={<DevisPage />} />
+        <Route path="/prix" element={<PrixPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
