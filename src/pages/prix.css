@@ -5,3 +5,4 @@
 .lp-video-title{margin-bottom:18px}
 .lp-progress{height:7px;border-radius:0}.lp-progress::-webkit-slider-thumb{width:0;height:0;appearance:none;border:0;background:transparent}.lp-progress::-moz-range-thumb{width:0;height:0;border:0;background:transparent}
 .lp-video-banner{display:flex;align-items:center;justify-content:center;gap:12px;max-width:1040px;height:50px;margin:0 auto;background:#123cf5;color:#fff;font-family:Tahoma,Arial,sans-serif;font-size:17px;line-height:1;letter-spacing:0;border-radius:10px 10px 0 0}.lp-video-banner svg{flex:none}.lp-video-player{border-radius:0 0 10px 10px}@media(max-width:560px){.lp-video-banner{height:46px;font-size:15px;gap:9px}}
+.lp-video-banner{direction:ltr}
