@@ -155,12 +155,12 @@
   appearance: none;
   border: 0;
   border-radius: 0;
-  background: rgba(255, 255, 255, .38);
+  background: linear-gradient(to right, #38bfd2 0%, #38bfd2 var(--progress, 0%), rgba(255, 255, 255, .38) var(--progress, 0%), rgba(255, 255, 255, .38) 100%);
   cursor: pointer;
   accent-color: #38bfd2;
 }
 
-.lp-progress::-webkit-slider-runnable-track { height: 7px; background: rgba(255, 255, 255, .38); }
+.lp-progress::-webkit-slider-runnable-track { height: 7px; background: transparent; }
 .lp-progress::-webkit-slider-thumb { width: 0; height: 0; appearance: none; border: 0; background: transparent; }
 .lp-progress::-moz-range-track { height: 7px; background: rgba(255, 255, 255, .38); }
 .lp-progress::-moz-range-progress { height: 7px; background: #38bfd2; }
@@ -246,8 +246,10 @@
   .lp-video-banner { min-height: 46px; font-size: 15px; gap: 9px; }
   .lp-video-player video { aspect-ratio: 16 / 10; }
   .lp-center-toggle { width: 64px; height: 64px; }
-  .lp-center-toggle.is-playing { opacity: 0; pointer-events: none; }
-  .lp-center-toggle.is-playing.is-visible { opacity: 1; pointer-events: auto; }
+  .lp-video-player:hover .lp-center-toggle.is-playing,
+  .lp-video-player:focus-within .lp-center-toggle.is-playing { opacity: 0; pointer-events: none; }
+  .lp-video-player:hover .lp-center-toggle.is-playing.is-visible,
+  .lp-video-player:focus-within .lp-center-toggle.is-playing.is-visible { opacity: 1; pointer-events: auto; }
   .lp-fullscreen-toggle { right: 12px; bottom: 18px; width: 34px; height: 34px; }
   .lp-video-context { margin-top: 34px; }
   .lp-page h1 { margin-bottom: 15px; font-size: clamp(33px, 10vw, 48px); line-height: 1.08; }
