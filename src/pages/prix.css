@@ -110,9 +110,8 @@
   transform: translate(-50%, -50%) scale(1.05);
 }
 
-.lp-center-toggle.is-playing { opacity: 0; }
-.lp-video-player:hover .lp-center-toggle.is-playing,
-.lp-video-player:focus-within .lp-center-toggle.is-playing { opacity: 1; }
+.lp-center-toggle.is-playing { opacity: 0; pointer-events: none; }
+.lp-center-toggle.is-playing.is-visible { opacity: 1; pointer-events: auto; }
 
 .lp-fullscreen-toggle {
   position: absolute;
@@ -246,10 +245,6 @@
   .lp-video-banner { min-height: 46px; font-size: 15px; gap: 9px; }
   .lp-video-player video { aspect-ratio: 16 / 10; }
   .lp-center-toggle { width: 64px; height: 64px; }
-  .lp-video-player:hover .lp-center-toggle.is-playing,
-  .lp-video-player:focus-within .lp-center-toggle.is-playing { opacity: 0; pointer-events: none; }
-  .lp-video-player:hover .lp-center-toggle.is-playing.is-visible,
-  .lp-video-player:focus-within .lp-center-toggle.is-playing.is-visible { opacity: 1; pointer-events: auto; }
   .lp-fullscreen-toggle { right: 12px; bottom: 18px; width: 34px; height: 34px; }
   .lp-video-context { margin-top: 34px; }
   .lp-page h1 { margin-bottom: 15px; font-size: clamp(33px, 10vw, 48px); line-height: 1.08; }
