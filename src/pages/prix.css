@@ -114,6 +114,27 @@
 .lp-video-player:hover .lp-center-toggle.is-playing,
 .lp-video-player:focus-within .lp-center-toggle.is-playing { opacity: 1; }
 
+.lp-fullscreen-toggle {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+  z-index: 4;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 50%;
+  background: rgba(7, 21, 33, .66);
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.lp-fullscreen-toggle:hover { background: #38bfd2; color: #071521; transform: scale(1.06); }
+.lp-video-player:fullscreen { display: grid; place-items: center; width: 100vw; height: 100vh; border-radius: 0; background: #071521; }
+.lp-video-player:fullscreen video { max-height: 100vh; object-fit: contain; }
+
 .lp-video-controls {
   position: absolute;
   right: 0;
@@ -225,6 +246,9 @@
   .lp-video-banner { min-height: 46px; font-size: 15px; gap: 9px; }
   .lp-video-player video { aspect-ratio: 16 / 10; }
   .lp-center-toggle { width: 64px; height: 64px; }
+  .lp-center-toggle.is-playing { opacity: 0; pointer-events: none; }
+  .lp-center-toggle.is-playing.is-visible { opacity: 1; pointer-events: auto; }
+  .lp-fullscreen-toggle { right: 12px; bottom: 18px; width: 34px; height: 34px; }
   .lp-video-context { margin-top: 34px; }
   .lp-page h1 { margin-bottom: 15px; font-size: clamp(33px, 10vw, 48px); line-height: 1.08; }
   .lp-video-context > p { font-size: 15px; line-height: 1.65; }
