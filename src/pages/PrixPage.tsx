@@ -20,8 +20,9 @@ const audioReviews = [
 ];
 
 const faq = [
-  { question: "Dans quelles zones intervenez-vous ?", answer: "Zaki Cleaning intervient à Alger et ses environs, pour les particuliers, entreprises et établissements professionnels." },
-  { question: "Quels types de nettoyage proposez-vous ?", answer: "Nous réalisons le nettoyage après travaux, le nettoyage profond d'appartements et villas, les interventions de déménagement, les restaurants, bureaux, écoles, cliniques et l'entretien quotidien." },
+  { question: "Dans quelles zones intervenez-vous ?", answer: "Zaki Cleaning intervient à Alger, Blida et Boumerdès, auprès des particuliers, entreprises et établissements professionnels." },
+  { question: "Quels types de nettoyage proposez-vous ?", answer: "Nous réalisons le nettoyage de fin de chantier pour les maisons, villas, usines et administrations, avec une offre spéciale pensée pour les promoteurs. Nous intervenons également pour le nettoyage profond, les déménagements, restaurants, bureaux, écoles, cliniques et l’entretien quotidien." },
+  { question: "Combien de temps faut-il pour terminer le nettoyage d’une maison ?", answer: "La plupart des maisons sont traitées en une journée. Pour une villa, la durée est définie selon le nombre d’étages, la surface et l’état des lieux afin d’organiser une équipe adaptée et de garantir un résultat soigné." },
   { question: "Comment se passe une intervention ?", answer: "Nous échangeons d'abord sur votre besoin, puis nous organisons les zones, les produits et le matériel. Une vérification finale est réalisée avant la fin de la prestation." },
   { question: "Puis-je vous contacter directement ?", answer: "Oui. Appelez le 0779 30 66 08 ou écrivez-nous sur WhatsApp. Nous vous répondrons pour comprendre votre besoin." },
 ];
