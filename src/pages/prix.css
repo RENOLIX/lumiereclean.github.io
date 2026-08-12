@@ -218,12 +218,16 @@
 .lp-faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
 .lp-faq-answer p { overflow: hidden; margin: 0; color: #59717c; font-size: 15px; line-height: 1.75; }
 .lp-faq-answer ul { min-height: 0; overflow: hidden; margin: 0; padding: 0; color: #59717c; list-style: none; }
+.lp-faq-list-content { min-height: 0; overflow: hidden; }
+.lp-faq-list-content > p { margin-bottom: 13px; }
 .lp-faq-answer li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; line-height: 1.55; }
 .lp-faq-answer li + li { margin-top: 9px; }
 .lp-faq-answer li::before { width: 7px; height: 7px; flex: none; margin-top: .55em; border-radius: 50%; background: #078ba4; content: ""; }
 .lp-faq-list article.open .lp-faq-answer { grid-template-rows: 1fr; }
 .lp-faq-list article.open .lp-faq-answer p { padding: 0 42px 23px 0; }
 .lp-faq-list article.open .lp-faq-answer ul { padding: 0 42px 24px 0; }
+.lp-faq-list article.open .lp-faq-list-content { padding: 0 42px 24px 0; }
+.lp-faq-list article.open .lp-faq-list-content ul { padding: 0; }
 
 .lp-final { padding: 110px 24px; background: #c9f1f6; text-align: center; }
 .lp-final h2 { margin-bottom: 15px; font-size: clamp(34px, 5vw, 58px); }
@@ -268,6 +272,7 @@
   .lp-faq-list button { gap: 13px; padding: 20px 0; font-size: 15px; }
   .lp-faq-list article.open .lp-faq-answer p { padding: 0 0 20px; font-size: 14px; }
   .lp-faq-list article.open .lp-faq-answer ul { padding: 0 0 20px; }
+  .lp-faq-list article.open .lp-faq-list-content { padding: 0 0 20px; }
   .lp-faq-answer li { font-size: 14px; }
   .lp-final { padding: 76px 20px; }
   .lp-final h2 { font-size: clamp(32px, 9vw, 44px); }
