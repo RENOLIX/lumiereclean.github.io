@@ -219,7 +219,8 @@
 .lp-faq-answer p { overflow: hidden; margin: 0; color: #59717c; font-size: 15px; line-height: 1.75; }
 .lp-faq-answer ul { min-height: 0; overflow: hidden; margin: 0; padding: 0; color: #59717c; list-style: none; }
 .lp-faq-list-content { min-height: 0; overflow: hidden; }
-.lp-faq-list-content > p { margin-bottom: 13px; }
+.lp-faq-list-content > p { margin-bottom: 5px; }
+.lp-faq-list-content li + li { margin-top: 5px; }
 .lp-faq-answer li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; line-height: 1.55; }
 .lp-faq-answer li + li { margin-top: 9px; }
 .lp-faq-answer li::before { width: 7px; height: 7px; flex: none; margin-top: .55em; border-radius: 50%; background: #078ba4; content: ""; }
