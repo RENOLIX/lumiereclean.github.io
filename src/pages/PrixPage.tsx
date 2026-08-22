@@ -20,6 +20,8 @@ const audioReviews = [
   { file: "voix-08.m4a", label: "Témoignage client 08", type: "audio/mp4" },
   { file: "voix-09.ogg", label: "Témoignage client 09", type: "audio/ogg" },
   { file: "voix-10.m4a", label: "Témoignage client 10", type: "audio/mp4" },
+  { file: "voix-11.ogg", label: "Témoignage client 11", type: "audio/ogg" },
+  { file: "voix-12.ogg", label: "Témoignage client 12", type: "audio/ogg" },
 ];
 
 const faq = [
